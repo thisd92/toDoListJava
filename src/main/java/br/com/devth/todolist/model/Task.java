@@ -1,21 +1,29 @@
 package br.com.devth.todolist.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "tb_tasks")
 public class Task {
 	
-	Long id;
-	String tittle, description;
-	Boolean completed;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String title, description;
 	
 	public Task() {
 		
 	}
 	
-	public Task(Long id, String tittle, String description, Boolean completed) {
+	public Task(Long id, String title, String description, Boolean completed) {
 		super();
 		this.id = id;
-		this.tittle = tittle;
+		this.title = title;
 		this.description = description;
-		this.completed = completed;
 	}
 
 	public Long getId() {
@@ -26,12 +34,12 @@ public class Task {
 		this.id = id;
 	}
 
-	public String getTittle() {
-		return tittle;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setTittle(String tittle) {
-		this.tittle = tittle;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getDescription() {
@@ -40,14 +48,6 @@ public class Task {
 
 	public void setDescription(String description) {
 		this.description = description;
-	}
-
-	public Boolean getCompleted() {
-		return completed;
-	}
-
-	public void setCompleted(Boolean completed) {
-		this.completed = completed;
 	}
 	
 }

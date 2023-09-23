@@ -1,0 +1,28 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+form{
+    width: 80%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+}
+
+.container-link{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+table{
+    width: 80%;
+}

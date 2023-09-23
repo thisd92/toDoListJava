@@ -1,4 +1,4 @@
-package br.com.devth.todolist.repository;
+package br.com.devth.todolist.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
